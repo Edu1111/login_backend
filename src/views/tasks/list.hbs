@@ -1,0 +1,39 @@
+<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+  <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg mt-12">
+    {{#each links}}
+    <table class="table-fixed w-full">
+      <thead>
+        <tr class="bg-indigo-500 text-white">
+          <th class="w-20 py-4 ...">ID</th>
+          <th class="w-1/2 py-4...">Title</th>
+          <th class="w-1/16 py-4...">Created</th>
+          <th class="w-28 py-4...">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="py-3 px-6">{{id}}</td>
+          <td class="p-3">{{title}}</td>
+          <td class="p-3 text-center">{{timeago created_at}}</td>
+          <td class="p-3">
+            <a href="/tasks/delete/{{id}}"><button class="bg-red-400 text-white px-3 py-1 rounded-sm"> <i class="fas fa-trash"></i></button></a>
+            <a href="/tasks/edit/{{id}}"><button class="bg-green-400 text-white px-3 py-1 rounded-sm"> <i class="fas fa-pen"></i></button></a>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+    {{else}}
+      <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 text-center">
+        <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg mt-12">
+          <p class="m-8 text-center "> There are not tasks saved yet</p>
+          <a href="/tasks/add" class="m-8 font-semibold border-2 border-white hover:bg-indigo-400 hover:text-neutral-700 py-3 px-4 rounded-mb">Create One</a>
+        </div>
+
+      </div>
+
+
+    {{/each}}
+  </div>
+
+</div>

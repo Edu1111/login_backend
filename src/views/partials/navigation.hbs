@@ -1,0 +1,38 @@
+    <nav class="flex py-5 bg-purple-500 text-white px-14">
+      <div class="w-1/2 px-12 mr-auto">
+        <a href="/"><h1 class="text-10 font-bold">Falcons Todo list</h1></a>
+      </div>
+
+      <ul class="w-1/2 px-6 ml-auto flex justify-end pt-1">
+      
+      
+     <!-- Tailwind CSS Link
+        <li class="nav-item px-4"> 
+          <a href="/login" class="nav-link font-semibold hover:bg-purple-700 py-3 px-4 rounded-mb">Log in</a>
+        </li>-->
+        {{#if user}}
+        <li class="nav-item px-4"> 
+          <a href="/tasks" class="nav-link font-semibold border-2 border-white hover:bg-indigo-400 hover:text-neutral-700 py-3 px-4 rounded-mb">All tasks</a>
+        </li>
+        <li class="nav-item px-4"> 
+          <a href="/tasks/add/" class="nav-link font-semibold border-2 border-white hover:bg-indigo-400 hover:text-neutral-700 py-3 px-4 rounded-mb">Add task</a>
+        </li>
+        <li class="nav-item px-4">
+          <a href="/profile" class="nav-link font-semibold border-2 border-white hover:bg-indigo-400 hover:text-neutral-700 py-3 px-4 rounded-mb">Profile</a>
+        </li>
+        <li class="nav-item px-4">
+          <a href="/logout" class="nav-link font-semibold border-2 border-white hover:bg-red-200 hover:text-neutral-300 py-3 px-4 rounded-mb">Logout</a>
+        </li>
+        {{else}}
+        <li class="nav-item px-4">
+          <a href="/signin" class="nav-link font-semibold border-2 border-white hover:bg-red-200 hover:text-neutral-300 py-3 px-4 rounded-mb">Signin</a>
+        </li>
+        <li class="nav-item px-4">
+          <a href="/signup" class="nav-link font-semibold border-2 border-white hover:bg-red-200 hover:text-neutral-300 py-3 px-4 rounded-mb">Signup</a>
+        </li>
+        {{/if}}
+      
+
+      </ul>
+
+    </nav>
